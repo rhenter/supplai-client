@@ -55,9 +55,16 @@ USAGE
     >>
     >> # Use the result as object
     >> print(result.as_obj())
-    UserUsers(previous=None, count=1, next=None, results=[NamelessModel(occupation=None, full_name='Admin System',
-    image=None, cpf='', is_superuser=True, cellphone='', email='', sex=None, username='admin', birthdate='09/09/1999',
-    logged_as='', id=1, is_temp=False, is_active=True)])
+    UserUsers(
+        previous=None,
+        count=1,
+        next=None,
+        results=[
+            NamelessModel(occupation=None, full_name='Admin System',
+                image=None, cpf='', is_superuser=True, cellphone='', email='', sex=None, username='admin', birthdate='09/09/1999',
+                logged_as='', id=1, is_temp=False, is_active=True)
+        ]
+    )
     >>
     >> # Use the result as dict
     >> print(result.as_dict())
@@ -101,10 +108,7 @@ Please send pull requests, very much appreciated.
 NOTES
 -----
 
-* Supplai API REST-v20 is still under development, some functionality have not yet been implemented (Pricing History, Forex Labs), but I will keep an eye on it, and as soon as it gets implemented I will update this library accordingly.
-* DO NOT USE THIS LIBRARY ON PRODUCTION! It is under heavy development and still lacks testing suites. It is also partially documented.
-* Use this library at your own risk.
-* Happy hunting on the markets!!
+* Supplai API REST Client is still under development, some functionality have not yet been implemented, but I will keep an eye on it, and as soon as it gets implemented I will update this library accordingly.
 
 
 .. |Travis Build Status| image:: https://travis-ci.org/rhenter/supplai_client.svg?branch=master
