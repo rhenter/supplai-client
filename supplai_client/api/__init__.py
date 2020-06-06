@@ -1,5 +1,6 @@
 from .base import BaseAPI  # noqa
 from .auction import Auction  # noqa
+from .category import Category  # noqa
 from .condo import Condo  # noqa
 from .core import Core  # noqa
 from .contact import Contact  # noqa

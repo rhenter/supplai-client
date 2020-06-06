@@ -31,11 +31,11 @@ class Core:
         endpoint = f'{self.endpoint_base}/privacy-policy/'
         return self._api.search(endpoint)
 
-    def get_privacy_policy(self, privacy_policy_code):
+    def get_privacy_policy(self, code):
         """Get the full details for a single Privacy Policy Text.
 
         Args:
-            privacy_policy_code (str): Privacy Policy Code.
+            code (str): Privacy Policy Code.
 
         Returns:
             dict: Full privacy policy details.
@@ -46,7 +46,7 @@ class Core:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/privacy-policy/{privacy_policy_code}/'
+        endpoint = f'{self.endpoint_base}/privacy-policy/{code}/'
         return self._api.search(endpoint)
 
     def get_terms_of_services(self):
@@ -67,11 +67,11 @@ class Core:
         endpoint = f'{self.endpoint_base}/terms-of-service/'
         return self._api.search(endpoint)
 
-    def get_terms_of_service(self, terms_of_service_code):
+    def get_terms_of_service(self, code):
         """Get the full details for a single Privacy Policy.
 
         Args:
-            terms_of_service_code (str): Privacy Policy Code.
+            code (str): Privacy Policy Code.
 
         Returns:
             dict: Full terms of service details.
@@ -82,5 +82,5 @@ class Core:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/terms-of-service/{terms_of_service_code}/'
+        endpoint = f'{self.endpoint_base}/terms-of-service/{code}/'
         return self._api.search(endpoint)

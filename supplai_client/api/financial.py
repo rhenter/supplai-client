@@ -31,11 +31,11 @@ class Financial:
         endpoint = f'{self.endpoint_base}/payments/'
         return self._api.search(endpoint)
 
-    def get_payment(self, payment_code):
+    def get_payment(self, code):
         """Get the full details for a single Financial.
 
         Args:
-            payment_code (str): Financial Code.
+            code (str): Financial Code.
 
         Returns:
             dict: Full payment details.
@@ -46,5 +46,5 @@ class Financial:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/payments/{payment_code}/'
+        endpoint = f'{self.endpoint_base}/payments/{code}/'
         return self._api.search(endpoint)

@@ -1,4 +1,4 @@
-from .api import BaseAPI, Auction, Condo, Core, Contact, Faq, Financial, Order, Supplier, User
+from .api import BaseAPI, Auction, Category, Condo, Core, Contact, Faq, Financial, Order, Supplier, User
 
 
 class API(BaseAPI):
@@ -27,6 +27,7 @@ class API(BaseAPI):
         super().__init__(environment, access_token, timeout, api_port=api_port, locale=locale)
 
         self.auction = Auction(self)
+        self.category = Category(self)
         self.condo = Condo(self)
         self.core = Core(self)
         self.contact = Contact(self)

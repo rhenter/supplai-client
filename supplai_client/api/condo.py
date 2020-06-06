@@ -31,11 +31,11 @@ class Condo:
         endpoint = f'{self.endpoint_base}/condos/'
         return self._api.search(endpoint)
 
-    def get_condo(self, condo_code):
+    def get_condo(self, code):
         """Get the full details for a single Condo.
 
         Args:
-            condo_code (str): Condo Code.
+            code (str): Condo Code.
 
         Returns:
             dict: Full condominium details.
@@ -46,5 +46,5 @@ class Condo:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/condos/{condo_code}/'
+        endpoint = f'{self.endpoint_base}/condos/{code}/'
         return self._api.search(endpoint)

@@ -1,26 +1,26 @@
 """
-Order endpoints
+Category endpoints
 """
 
 
-class Order:
-    """Class holding order functions.
-    Order
-        Docs: https://api.supplai.com.br/doc/order/
+class Category:
+    """Class holding category functions.
+    Category
+        Docs: https://api.supplai.com.br/doc/category/
     """
-    endpoint_base = 'order'
+    endpoint_base = 'category'
 
     def __init__(self, api):
         self._api = api
 
-    def get_orders(self):
-        """Get a list of all Orders.
+    def get_categories(self):
+        """Get a list of all Condos.
 
         Args:
             This function takes no arguments.
 
         Returns:
-            dict: All orders.
+            dict: All categories.
 
         Raises:
             RequestException: An error thrown by Requests library.
@@ -28,17 +28,17 @@ class Order:
             SupplaiError: An error occurred while requesting the Supplai API.
         """
 
-        endpoint = f'{self.endpoint_base}/orders/'
+        endpoint = f'{self.endpoint_base}/categories/'
         return self._api.search(endpoint)
 
-    def get_order(self, code):
-        """Get the full details for a single Order.
+    def get_category(self, id):
+        """Get the full details for a single Category.
 
         Args:
-            code (str): Order Code.
+            id (uuid): Category Id.
 
         Returns:
-            dict: Full order details.
+            dict: Full category details.
 
         Raises:
             RequestException: An error thrown by Requests library.
@@ -46,5 +46,5 @@ class Order:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/orders/{code}/'
+        endpoint = f'{self.endpoint_base}/categories/{id}/'
         return self._api.search(endpoint)

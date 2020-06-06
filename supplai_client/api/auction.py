@@ -31,11 +31,11 @@ class Auction:
         endpoint = f'{self.endpoint_base}/auctions/'
         return self._api.search(endpoint)
 
-    def get_auction(self, auction_code):
+    def get_auction(self, code):
         """Get the full details for a single Auction.
 
         Args:
-            auction_code (str): Auction Code.
+            code (str): Auction Code.
 
         Returns:
             dict: Full auction details.
@@ -46,5 +46,5 @@ class Auction:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/auctions/{auction_code}/'
+        endpoint = f'{self.endpoint_base}/auctions/{code}/'
         return self._api.search(endpoint)

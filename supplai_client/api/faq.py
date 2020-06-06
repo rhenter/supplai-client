@@ -31,11 +31,11 @@ class Faq:
         endpoint = f'{self.endpoint_base}/faqs/'
         return self._api.search(endpoint)
 
-    def get_faq(self, faq_code):
+    def get_faq(self, code):
         """Get the full details for a single Faq.
 
         Args:
-            faq_code (str): Faq Code.
+            code (str): Faq Code.
 
         Returns:
             dict: Full faq details.
@@ -46,5 +46,5 @@ class Faq:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/faqs/{faq_code}/'
+        endpoint = f'{self.endpoint_base}/faqs/{code}/'
         return self._api.search(endpoint)

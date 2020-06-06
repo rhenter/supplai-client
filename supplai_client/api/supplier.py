@@ -31,11 +31,11 @@ class Supplier:
         endpoint = f'{self.endpoint_base}/suppliers/'
         return self._api.search(endpoint)
 
-    def get_supplier(self, supplier_code):
+    def get_supplier(self, code):
         """Get the full details for a single Supplier.
 
         Args:
-            supplier_code (str): Supplier Code.
+            code (str): Supplier Code.
 
         Returns:
             dict: Full supplier details.
@@ -46,7 +46,7 @@ class Supplier:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/suppliers/{supplier_code}/'
+        endpoint = f'{self.endpoint_base}/suppliers/{code}/'
         return self._api.search(endpoint)
 
     def get_supplier_documents(self, supplier_code):
