@@ -36,7 +36,7 @@ Or, you can download the source and
 USAGE
 -----
 
-1. Create a user on `<https://www.supplai.com.br>`_ to get a API Access Token.
+1. Request to the Supplai Admin team to a API Access Token.
 2. Import the supplai_client module and create an instance with your access token:
 
 .. code-block:: python
@@ -97,7 +97,7 @@ Contributing
 Please send pull requests, very much appreciated.
 
 
-1. Fork the `repository <https://bitbucket.org/supplai/supplai-client>`_ on GitHub.
+1. Fork the `repository <https://bitbucket.org/supplai/supplai-client>`_ on BitBucket.
 2. Create a virtualenv.
 3. Install requirements. ``pip install -r requirements-dev.txt``
 4. Install pre-commit. ``pre-commit install``
