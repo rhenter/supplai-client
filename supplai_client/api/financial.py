@@ -13,7 +13,7 @@ class Financial:
     def __init__(self, api):
         self._api = api
 
-    def get_payments(self):
+    def get_payments(self, **kwargs):
         """Get a list of all payments.
 
         Args:
@@ -29,7 +29,7 @@ class Financial:
         """
 
         endpoint = f'{self.endpoint_base}/payments/'
-        return self._api.search(endpoint)
+        return self._api.search(endpoint, **kwargs)
 
     def get_payment(self, code):
         """Get the full details for a single Financial.

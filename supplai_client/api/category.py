@@ -13,7 +13,7 @@ class Category:
     def __init__(self, api):
         self._api = api
 
-    def get_categories(self):
+    def get_categories(self, **kwargs):
         """Get a list of all Condos.
 
         Args:
@@ -29,13 +29,13 @@ class Category:
         """
 
         endpoint = f'{self.endpoint_base}/categories/'
-        return self._api.search(endpoint)
+        return self._api.search(endpoint, **kwargs)
 
-    def get_category(self, id):
+    def get_category(self, code):
         """Get the full details for a single Category.
 
         Args:
-            id (uuid): Category Id.
+            code (str): Category code.
 
         Returns:
             dict: Full category details.
@@ -46,5 +46,5 @@ class Category:
             SupplaiError: An error occurred while requesting the Supplai API.
 
         """
-        endpoint = f'{self.endpoint_base}/categories/{id}/'
+        endpoint = f'{self.endpoint_base}/categories/{code}/'
         return self._api.search(endpoint)

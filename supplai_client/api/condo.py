@@ -13,7 +13,7 @@ class Condo:
     def __init__(self, api):
         self._api = api
 
-    def get_condos(self):
+    def get_condos(self, **kwargs):
         """Get a list of all Condos.
 
         Args:
@@ -29,7 +29,7 @@ class Condo:
         """
 
         endpoint = f'{self.endpoint_base}/condos/'
-        return self._api.search(endpoint)
+        return self._api.search(endpoint, **kwargs)
 
     def get_condo(self, code):
         """Get the full details for a single Condo.

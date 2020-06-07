@@ -13,7 +13,7 @@ class Order:
     def __init__(self, api):
         self._api = api
 
-    def get_orders(self):
+    def get_orders(self, **kwargs):
         """Get a list of all Orders.
 
         Args:
@@ -29,7 +29,7 @@ class Order:
         """
 
         endpoint = f'{self.endpoint_base}/orders/'
-        return self._api.search(endpoint)
+        return self._api.search(endpoint, **kwargs)
 
     def get_order(self, code):
         """Get the full details for a single Order.

@@ -13,7 +13,7 @@ class User:
     def __init__(self, api):
         self._api = api
 
-    def get_users(self):
+    def get_users(self, **kwargs):
         """Get a list of all Accounts authorized for the provided token.
 
         Args:
@@ -29,7 +29,7 @@ class User:
         """
 
         endpoint = f'{self.endpoint_base}/users/'
-        return self._api.search(endpoint)
+        return self._api.search(endpoint, **kwargs)
 
     def get_user(self, user_id):
         """Get the full details for a single User.

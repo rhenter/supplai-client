@@ -15,12 +15,14 @@ class ResponseFactory:
         return '<{} object>'.format(self.response_name)
 
     def _get_response_name(self, endpoint):
+        if endpoint.startswith('/'):
+            endpoint = endpoint[1:]
         words = endpoint[:-1].split('?')[0].split('/')
         response_name = words[:1]
 
-        last = words[-1:]
-        if not last:
-            return 'Supplai'
+        last = [words[-1]]
+        if len(words) > 2:
+            last = [words[-2]]
 
         if last != response_name:
             response_name.extend(last)

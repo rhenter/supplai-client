@@ -13,7 +13,7 @@ class Supplier:
     def __init__(self, api):
         self._api = api
 
-    def get_suppliers(self):
+    def get_suppliers(self, **kwargs):
         """Get a list of all Suppliers.
 
         Args:
@@ -29,7 +29,7 @@ class Supplier:
         """
 
         endpoint = f'{self.endpoint_base}/suppliers/'
-        return self._api.search(endpoint)
+        return self._api.search(endpoint, **kwargs)
 
     def get_supplier(self, code):
         """Get the full details for a single Supplier.
