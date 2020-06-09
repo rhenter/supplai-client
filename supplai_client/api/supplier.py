@@ -67,7 +67,7 @@ class Supplier:
         endpoint = f'{self.endpoint_base}/suppliers-documents/?supplier__code={supplier_code}'
         return self._api.search(endpoint)
 
-    def get_supplier(self, supplier_document_code):
+    def get_supplier_document(self, supplier_document_code):
         """Get the full details for a single Supplier.
 
         Args:

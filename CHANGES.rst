@@ -1,6 +1,11 @@
 Changelog
 ---------
 
+0.2.1
+-----
+
+- BugFix: Supplier with wrong argument
+
 0.2.0
 -----
 

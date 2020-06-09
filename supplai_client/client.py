@@ -1,4 +1,4 @@
-from .api import BaseAPI, Auction, Category, Condo, Core, Contact, Faq, Financial, Order, Supplier, User
+from .api import BaseAPI, Auction, Category, Condo, Core, Contact, Faq, Financial, Notification, Order, Supplier, User
 
 
 class API(BaseAPI):
@@ -33,6 +33,7 @@ class API(BaseAPI):
         self.contact = Contact(self)
         self.faq = Faq(self)
         self.financial = Financial(self)
+        self.notification = Notification(self)
         self.order = Order(self)
         self.supplier = Supplier(self)
         self.user = User(self)
