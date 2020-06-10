@@ -1,6 +1,17 @@
 Changelog
 ---------
 
+0.3.0
+-----
+
+- Add Badges to the Read me file
+
+0.2.2
+-----
+
+- Fix all tests
+- Remove unnecessary files
+
 0.2.1
 -----
 

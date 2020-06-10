@@ -1,5 +1,8 @@
+=======================
 Supplai REST API Client
 =======================
+
+|PyPI latest| |PyPI Version| |PyPI License| |Travis Build Status| |Coverage Status|
 
 OVERVIEW
 --------

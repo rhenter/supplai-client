@@ -8,7 +8,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 version = '0.0.0'
 description = (
     "This library currently implements the features released under "
-    "version 3.0.1 of Supplai's REST API."
+    "version 0.100.x of Supplai's REST API."
 )
 changes = os.path.join(here, "CHANGES.rst")
 pattern = r'^(?P<version>[0-9]+.[0-9]+(.[0-9]+)?)'
