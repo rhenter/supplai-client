@@ -1,3 +1,5 @@
+import pytest
+
 from supplai_client.factories import ResponseFactory
 
 
@@ -14,4 +16,21 @@ def test_response_factory():
 
     obj = response.as_obj()
     assert obj.users[0].id == user_id
-    assert '<DataTest object>' == str(response)
+
+
+@pytest.mark.parametrize('endpoint,expected', [
+    ('data/test', 'DataTest'),
+    ('base/target/DETAIL', 'BaseTarget'),
+    ('base/sub/123123', 'BaseSub'),
+    ('test/data', 'TestData'),
+])
+def test_factory_str(endpoint,expected):
+    data = {'users': [{'id': '000-000-0000000-000', 'tags': []}]}
+
+    class ResponseTest:
+        def json(self):
+            return data
+
+    factory = ResponseFactory(ResponseTest(), endpoint)
+
+    assert str(factory) == f'<{expected} object>'

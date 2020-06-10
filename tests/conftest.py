@@ -1,22 +1,22 @@
 from unittest import mock
 import pytest
 
-from supplai_client import APIv20
-from supplai_client.api import Core
+from supplai_client import API
+from supplai_client.api import BaseAPI
 
 
 @pytest.fixture
 def cli_supplai_client():
     access_token = "945cb0accbb4c00a392bb35f1a3a4c1b-6ee340da5ac4f204ab27951077ebc43b"
     # access_token = "SECRET"
-    return APIv20(environment="practice", access_token=access_token)
+    return API(environment="practice", access_token=access_token)
 
 
 @pytest.fixture
 def fake_client():
     access_token = 'fake-token'
 
-    class FakeClient(Core):
+    class FakeClient(BaseAPI):
         base_urls = {
             "practice": "http://example.com",
         }

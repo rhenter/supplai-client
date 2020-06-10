@@ -4,13 +4,13 @@ from unittest.mock import Mock
 import pytest
 from requests.exceptions import Timeout, ReadTimeout, ConnectionError as RequestsConnectionError
 
-from supplai_client.api import Core
+from supplai_client.api import BaseAPI
 from supplai_client.exceptions import EnvironmentNotFound, ServerError
 
 
 @pytest.fixture
 def url_base():
-    return 'http://example.com/v3/'
+    return 'http://example.com/v1/'
 
 
 @pytest.fixture
@@ -19,7 +19,7 @@ def endpoint():
 
 
 def test_get_environment_error(fake_client):
-    class Test(Core):
+    class Test(BaseAPI):
         pass
 
     with pytest.raises(EnvironmentNotFound) as error:

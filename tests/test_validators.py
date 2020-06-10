@@ -8,7 +8,6 @@ from supplai_client.validators import validate_status_code
 
 @pytest.mark.parametrize('expected,status_code,expected_exception', [
     (False, status.HTTP_401_UNAUTHORIZED, AuthError),
-    (False, status.HTTP_400_BAD_REQUEST, SupplaiError),
     (False, status.HTTP_417_EXPECTATION_FAILED, SupplaiError),
     (False, status.HTTP_404_NOT_FOUND, NotFound),
     (False, status.HTTP_500_INTERNAL_SERVER_ERROR, ServerError),
@@ -27,10 +26,10 @@ def test_validate_status_valid(fake_client):
 
 def test_validate_status_with_api_code(fake_client):
     fake_client.transport.make_request = Mock(
-        side_effect=SupplaiError('400', {'errorCode': '999'})
+        side_effect=SupplaiError('401', {'errorCode': '999'})
     )
     with pytest.raises(SupplaiError) as error:
         fake_client.search('http://example.com/test')
 
-    expected = 'Supplai server returned [400] status code, and API returned [999] error code'
+    expected = 'Supplai server returned [401] status code, and API returned [999] error code'
     assert str(error.value) == expected

@@ -17,7 +17,7 @@ class ResponseFactory:
     def _get_response_name(self, endpoint):
         if endpoint.startswith('/'):
             endpoint = endpoint[1:]
-        words = endpoint[:-1].split('?')[0].split('/')
+        words = endpoint.split('?')[0].split('/')
         response_name = words[:1]
 
         last = [words[-1]]

@@ -96,7 +96,7 @@ setup(
         'version': VersionCommand},
     description=description,
     install_requires=install_requirements,
-    keywords='translate translation command line',
+    keywords='supplai ecommerce auction suppliers',
     license='MIT',
     long_description=long_description,
     name='supplai_client',

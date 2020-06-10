@@ -16,7 +16,6 @@ This project requires:
     * git client
     * virtualenvwrapper/virtualenv for local development
 
-
 Installation
 ------------
 
@@ -87,8 +86,6 @@ USAGE
        'is_temp': False}
       ]
      }
-
-
 
 
 Contributing
