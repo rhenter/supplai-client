@@ -1,6 +1,11 @@
 Changelog
 ---------
 
+0.3.1
+-----
+
+- BugFix: Remove lib status to avoid conflict with other python lib
+
 0.3.0
 -----
 

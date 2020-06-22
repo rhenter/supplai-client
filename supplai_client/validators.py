@@ -1,5 +1,4 @@
-import status
-
+from . import status
 from .exceptions import AuthError, NotFound, SupplaiError, ServerError
 
 

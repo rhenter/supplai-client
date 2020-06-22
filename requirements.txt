@@ -1,3 +1,2 @@
 pysimplemodel==2.3.3
-python-status
 requests
