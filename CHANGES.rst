@@ -1,6 +1,14 @@
 Changelog
 ---------
 
+0.4.0
+-----
+
+- Implement DynamicForm
+  - Add DynamicForm
+  - Add FormSections
+  - Add DynamicFields
+
 0.3.1
 -----
 
