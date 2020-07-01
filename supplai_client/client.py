@@ -1,4 +1,4 @@
-from .api import BaseAPI, Auction, Category, Condo, Core, Contact, Faq, Financial, Notification, Order, Supplier, User
+from .api import Auction, BaseAPI, Category, Condo, Contact, Core, DynamicForm, Faq, Financial, Notification, Order, Supplier, User
 
 
 class API(BaseAPI):
@@ -31,6 +31,7 @@ class API(BaseAPI):
         self.condo = Condo(self)
         self.core = Core(self)
         self.contact = Contact(self)
+        self.db_forms = DynamicForm(self)
         self.faq = Faq(self)
         self.financial = Financial(self)
         self.notification = Notification(self)
